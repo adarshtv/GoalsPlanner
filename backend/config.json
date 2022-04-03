@@ -1,0 +1,418 @@
+{"contractABI": [
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "UserComplexGoals",
+		"outputs": [
+			{
+				"internalType": "string",
+				"name": "goalName",
+				"type": "string"
+			},
+			{
+				"internalType": "bool",
+				"name": "completed",
+				"type": "bool"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "goalIndex",
+				"type": "uint256"
+			},
+			{
+				"components": [
+					{
+						"internalType": "string",
+						"name": "milestoneName",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "daysRemaining",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bool",
+						"name": "completed",
+						"type": "bool"
+					}
+				],
+				"internalType": "struct Goals.Milestone",
+				"name": "milestone",
+				"type": "tuple"
+			}
+		],
+		"name": "addComplexGoalMilestone",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "goalName",
+				"type": "string"
+			},
+			{
+				"components": [
+					{
+						"internalType": "string",
+						"name": "milestoneName",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "daysRemaining",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bool",
+						"name": "completed",
+						"type": "bool"
+					}
+				],
+				"internalType": "struct Goals.Milestone[]",
+				"name": "ms",
+				"type": "tuple[]"
+			}
+		],
+		"name": "addComplexGoals",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "goalName",
+				"type": "string"
+			}
+		],
+		"name": "addEasyGoal",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "cg",
+		"outputs": [
+			{
+				"internalType": "string",
+				"name": "goalName",
+				"type": "string"
+			},
+			{
+				"internalType": "bool",
+				"name": "completed",
+				"type": "bool"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "index",
+				"type": "uint256"
+			}
+		],
+		"name": "deleteComplexGoal",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "goalIndex",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "milestoneIndex",
+				"type": "uint256"
+			}
+		],
+		"name": "deleteComplexGoalMilestone",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "index",
+				"type": "uint256"
+			}
+		],
+		"name": "deleteEasyGoal",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "index",
+				"type": "uint256"
+			}
+		],
+		"name": "getComplexGoals",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "string",
+						"name": "goalName",
+						"type": "string"
+					},
+					{
+						"internalType": "bool",
+						"name": "completed",
+						"type": "bool"
+					},
+					{
+						"components": [
+							{
+								"internalType": "string",
+								"name": "milestoneName",
+								"type": "string"
+							},
+							{
+								"internalType": "uint256",
+								"name": "daysRemaining",
+								"type": "uint256"
+							},
+							{
+								"internalType": "bool",
+								"name": "completed",
+								"type": "bool"
+							}
+						],
+						"internalType": "struct Goals.Milestone[]",
+						"name": "UserMilestones",
+						"type": "tuple[]"
+					}
+				],
+				"internalType": "struct Goals.ComplexGoals",
+				"name": "",
+				"type": "tuple"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "getComplexGoalsCount",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "goalIndex",
+				"type": "uint256"
+			}
+		],
+		"name": "getComplexGoalsMilestonesCount",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "index",
+				"type": "uint256"
+			}
+		],
+		"name": "getEasyGoal",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "string",
+						"name": "goalName",
+						"type": "string"
+					},
+					{
+						"internalType": "bool",
+						"name": "completed",
+						"type": "bool"
+					}
+				],
+				"internalType": "struct Goals.EasyGoals",
+				"name": "",
+				"type": "tuple"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "getEasyGoalsCount",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "index",
+				"type": "uint256"
+			},
+			{
+				"internalType": "string",
+				"name": "goalName",
+				"type": "string"
+			}
+		],
+		"name": "updateComplexGoal",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "goalIndex",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "milestoneIndex",
+				"type": "uint256"
+			},
+			{
+				"components": [
+					{
+						"internalType": "string",
+						"name": "milestoneName",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "daysRemaining",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bool",
+						"name": "completed",
+						"type": "bool"
+					}
+				],
+				"internalType": "struct Goals.Milestone",
+				"name": "milestone",
+				"type": "tuple"
+			}
+		],
+		"name": "updateComplexGoalMilestone",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "index",
+				"type": "uint256"
+			},
+			{
+				"internalType": "bool",
+				"name": "status",
+				"type": "bool"
+			}
+		],
+		"name": "updateComplexGoalStatus",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "index",
+				"type": "uint256"
+			},
+			{
+				"internalType": "string",
+				"name": "goalName",
+				"type": "string"
+			}
+		],
+		"name": "updateEasyGoal",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "index",
+				"type": "uint256"
+			},
+			{
+				"internalType": "bool",
+				"name": "status",
+				"type": "bool"
+			}
+		],
+		"name": "updateEasyGoalStatus",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	}
+],
+"contractAddress": "0xCDfaaCDB955c20E35C44D6Ad0A276465A5Ba13B2"}
